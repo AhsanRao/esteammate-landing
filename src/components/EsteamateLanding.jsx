@@ -215,12 +215,12 @@ const EsteamateLanding = () => {
             <AnimatedElement animation="slideRight" className="md:w-1/2 lg:pr-8 mt-10 md:mt-0">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-blue-400">
-                  Smarter Bids. Faster Quotes.
+                  Comparing Qoutes Sucks
                 </span>
                 <span className="mt-2 block relative">
-                  Powered by 
+                  So, We did it for 
                   <span className="relative inline-block ml-2">
-                    AI
+                    you
                     <span className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-blue-400/20 animate-pulse rounded"></span>
                   </span>
                   <span className="absolute -bottom-2 left-0 h-1 w-24 bg-gradient-to-r from-pink-600 to-blue-400 rounded"></span>
@@ -240,21 +240,6 @@ const EsteamateLanding = () => {
                 </a> */}
               </div>
 
-              {/* Added stats section */}
-              <div className="mt-12 grid grid-cols-3 gap-4">
-                <div className="text-center">
-                  <div className={`text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-600 to-blue-400`}>85%</div>
-                  <div className={`text-xs mt-1 ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Time Saved</div>
-                </div>
-                <div className="text-center">
-                  <div className={`text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-600 to-blue-400`}>1.2k+</div>
-                  <div className={`text-xs mt-1 ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Active Users</div>
-                </div>
-                <div className="text-center">
-                  <div className={`text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-600 to-blue-400`}>92%</div>
-                  <div className={`text-xs mt-1 ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>Satisfaction</div>
-                </div>
-              </div>
             </AnimatedElement>
 
             <AnimatedElement animation="slideLeft" className="md:w-1/2 flex justify-end" delay={300}>
@@ -390,27 +375,11 @@ const EsteamateLanding = () => {
         </div>
       </div>
       
-      {/* Client logos section */}
-      <div className={`${isDarkMode ? 'bg-gray-800/70' : 'bg-white/70'} backdrop-blur-md py-8 w-full`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <AnimatedElement animation="fade" delay={200}>
-            <p className={`text-center text-sm font-medium mb-6 ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-              TRUSTED BY INDUSTRY LEADERS
-            </p>
-            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <div key={i} className={`h-8 w-32 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'} rounded opacity-50 hover:opacity-100 transition-opacity duration-300`}></div>
-              ))}
-            </div>
-          </AnimatedElement>
-        </div>
-      </div>
-      
       {/* Problem → Solution Section */}
       <div className={`${isDarkMode ? 'bg-gray-800/70' : 'bg-white/70'} backdrop-blur-md py-20 w-full`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <AnimatedElement animation="scale" className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold">Estimating shouldn't feel like firefighting.</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">Comparing quotes shouldn’t be chaos</h2>
             <div className="mt-10 max-w-3xl mx-auto grid gap-8 md:grid-cols-2 relative">
               {/* Connector line between problem and solution */}
               <div className="hidden md:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-0.5 bg-gradient-to-r from-pink-600 to-blue-400"></div>
@@ -420,20 +389,20 @@ const EsteamateLanding = () => {
                   <div className="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center mr-3">
                     <X size={20} className="text-red-500" />
                   </div>
-                  The Problem
+                  Problems
                 </h3>
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <X size={16} className="text-red-500 mt-1 mr-3 flex-shrink-0" />
-                    <span className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Manual quote entry in multiple systems, wasting hours on data entry</span>
+                    <span className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Qoutes come in all shapes and sizes, making comparing apples to apples a tedious challege</span>
                   </li>
                   <li className="flex items-start">
                     <X size={16} className="text-red-500 mt-1 mr-3 flex-shrink-0" />
-                    <span className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Endless spreadsheets with complex formulas that only one person understands</span>
+                    <span className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Time wasted chasing down clarifications and missing information</span>
                   </li>
                   <li className="flex items-start">
                     <X size={16} className="text-red-500 mt-1 mr-3 flex-shrink-0" />
-                    <span className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Scattered notes and lost information leading to costly errors</span>
+                    <span className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Project details alip through the cracks and lead to costly surprises</span>
                   </li>
                 </ul>
               </AnimatedElement>
@@ -443,20 +412,20 @@ const EsteamateLanding = () => {
                   <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center mr-3">
                     <Check size={20} className="text-green-500" />
                   </div>
-                  The Solution
+                  Solutions
                 </h3>
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <Check size={16} className="text-green-500 mt-1 mr-3 flex-shrink-0" />
-                    <span className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>One unified workspace for all quotes and bids with automated capture</span>
+                    <span className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>AI bid-leveling that creates a single, standardized view for easy comparison</span>
                   </li>
                   <li className="flex items-start">
                     <Check size={16} className="text-green-500 mt-1 mr-3 flex-shrink-0" />
-                    <span className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>AI-powered comparisons and summaries that highlight what matters</span>
+                    <span className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Flagged scope gaps with tailored clarification scripts for quick follow ups</span>
                   </li>
                   <li className="flex items-start">
                     <Check size={16} className="text-green-500 mt-1 mr-3 flex-shrink-0" />
-                    <span className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Smart organization with browser extension that works where you do</span>
+                    <span className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Smart organization with browser extension that centralizes notes, clarifications, and follow-ups</span>
                   </li>
                 </ul>
               </AnimatedElement>
@@ -484,7 +453,7 @@ const EsteamateLanding = () => {
           <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 mb-16">
             <div className="md:w-1/3 pr-0 md:pr-8">
               <AnimatedElement animation="slideRight" delay={100} className="space-y-2">
-                {['Quote Capture', 'Bid Analysis', 'Team Collaboration', 'Project Dashboard'].map((tab, index) => (
+                {['Scope Creation', 'Qoute Capture', 'Bid Analysis', 'Clarificaiton Scripts'].map((tab, index) => (
                   <div 
                     key={index}
                     className={`p-4 rounded-lg cursor-pointer ${activeTab === index 
@@ -504,7 +473,7 @@ const EsteamateLanding = () => {
             <div className="md:w-2/3">
               <AnimatedElement animation="slideLeft" delay={200} className={`rounded-xl shadow-xl overflow-hidden ${isDarkMode ? 'bg-gray-800' : 'bg-white'} p-6`}>
                 {/* Tab content */}
-                {activeTab === 0 && (
+                {activeTab === 1 && (
                   <div className="animate-fadeIn">
                     <h3 className="text-xl font-semibold mb-4">Instant Quote Capture</h3>
                     <p className={`mb-6 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
@@ -530,7 +499,7 @@ const EsteamateLanding = () => {
                   </div>
                 )}
                 
-                {activeTab === 1 && (
+                {activeTab === 2 && (
                   <div className="animate-fadeIn">
                     <h3 className="text-xl font-semibold mb-4">Smart Bid Comparison</h3>
                     <p className={`mb-6 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
@@ -564,19 +533,19 @@ const EsteamateLanding = () => {
                   </div>
                 )}
                 
-                {activeTab === 2 && (
+                {activeTab === 0 && (
                   <div className="animate-fadeIn">
-                    <h3 className="text-xl font-semibold mb-4">Team Collaboration</h3>
+                    <h3 className="text-xl font-semibold mb-4">Generative Scope Creation</h3>
                     <p className={`mb-6 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                      Share projects with team members, assign roles, track changes, and collaborate in real-time with notifications and shared annotations.
+                      Smarly generated scope areas based on your project notes, qoutes, and description eliminate clutter and confusion.
                     </p>
                     <div className="aspect-video bg-gradient-to-br from-gray-900 to-gray-700 rounded-lg flex items-center justify-center relative overflow-hidden">
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="flex space-x-3">
-                          <div className="w-10 h-10 rounded-full bg-pink-500/70 flex items-center justify-center text-white text-sm">AS</div>
-                          <div className="w-10 h-10 rounded-full bg-blue-500/70 flex items-center justify-center text-white text-sm">JD</div>
-                          <div className="w-10 h-10 rounded-full bg-green-500/70 flex items-center justify-center text-white text-sm">RK</div>
-                          <div className="w-10 h-10 rounded-full bg-purple-500/70 flex items-center justify-center text-white text-sm">MB</div>
+                          <div className="w-10 h-10 rounded-full bg-pink-500/70 flex items-center justify-center text-white text-sm">S1</div>
+                          <div className="w-10 h-10 rounded-full bg-blue-500/70 flex items-center justify-center text-white text-sm">S2</div>
+                          <div className="w-10 h-10 rounded-full bg-green-500/70 flex items-center justify-center text-white text-sm">S3</div>
+                          <div className="w-10 h-10 rounded-full bg-purple-500/70 flex items-center justify-center text-white text-sm">S4</div>
                           <div className="w-10 h-10 rounded-full bg-gray-700 border border-gray-500 flex items-center justify-center text-white text-sm">+</div>
                         </div>
                       </div>
@@ -595,9 +564,9 @@ const EsteamateLanding = () => {
                 
                 {activeTab === 3 && (
                   <div className="animate-fadeIn">
-                    <h3 className="text-xl font-semibold mb-4">Project Dashboard</h3>
+                    <h3 className="text-xl font-semibold mb-4">Tailored Clarification Scripts</h3>
                     <p className={`mb-6 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                      Get a bird's-eye view of all your projects, track bid status, monitor budgets, and see team activity all from one centralized dashboard.
+                      Professional bid-leveling scripts based on any gaps or omissions discovered, ready for you to share with bidders.
                     </p>
                     <div className="aspect-video bg-gradient-to-br from-gray-900 to-gray-700 rounded-lg flex items-center justify-center relative overflow-hidden">
                       <div className="absolute inset-0 grid grid-cols-2 gap-3 p-4">
@@ -634,225 +603,11 @@ const EsteamateLanding = () => {
             </div>
           </div>
           
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mt-12">
-            {/* Feature cards */}
-            {[
-              {
-                icon: <Upload size={24} className="text-white" />,
-                title: "Quote Upload",
-                desc: "Upload quotes directly from any webpage using our browser extension."
-              },
-              {
-                icon: <Sparkles size={24} className="text-white" />,
-                title: "Smart Bid Comparison",
-                desc: "AI automatically compares bids and highlights key differences."
-              },
-              {
-                icon: <Building size={24} className="text-white" />,
-                title: "Company Dashboard",
-                desc: "Centralized workspace for teams to manage all projects."
-              },
-              {
-                icon: <Users size={24} className="text-white" />,
-                title: "Team Collaboration",
-                desc: "Share projects, notes, and quotes with team members in real-time."
-              },
-              {
-                icon: <CreditCard size={24} className="text-white" />,
-                title: "Payment Tracking",
-                desc: "Monitor payments, installments, and contractor billing."
-              },
-              {
-                icon: <Shield size={24} className="text-white" />,
-                title: "Admin Controls",
-                desc: "Manage user roles, permissions, and account settings."
-              }
-            ].map((feature, index) => (
-              <AnimatedElement 
-                key={index} 
-                animation={index % 2 === 0 ? "fade" : "scale"} 
-                delay={100 * index}
-                className={`rounded-xl p-8 ${isDarkMode ? 'bg-gray-800' : 'bg-white'} shadow-lg transition-all duration-300 hover:shadow-xl transform hover:-translate-y-1 hover:scale-[1.02] group`}
-              >
-                <div className="w-14 h-14 rounded-full bg-gradient-to-r from-pink-600 to-blue-400 flex items-center justify-center mb-6 transform transition-all duration-500 group-hover:rotate-12">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                  {feature.desc}
-                </p>
-                <div className="mt-4">
-                  <a href="#" className={`inline-flex items-center text-sm font-medium ${isDarkMode ? 'text-blue-400 hover:text-blue-300' : 'text-blue-600 hover:text-blue-800'}`}>
-                    Learn more <ArrowRight size={14} className="ml-1 group-hover:translate-x-1 transition-transform duration-300" />
-                  </a>
-                </div>
-              </AnimatedElement>
-            ))}
-          </div>
+          
         </div>
       </div>
       
-      {/* AI Superpowers Section */}
-      <div id="ai" className={`py-24 ${isDarkMode ? 'bg-gray-800/70' : 'bg-white/70'} backdrop-blur-md w-full`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <AnimatedElement animation="fade" className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 mb-12 md:mb-0 md:pr-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 flex items-center">
-                <span className="mr-3 rounded-full bg-gradient-to-r from-pink-600/20 to-blue-400/20 p-2">
-                  <Sparkles size={26} className="text-blue-400" />
-                </span>
-                AI Superpowers
-              </h2>
-              <div className="space-y-6">
-                <AnimatedElement animation="slideRight" delay={100} className={`p-5 rounded-xl ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'} shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group`}>
-                  <h3 className="text-lg font-medium flex items-center">
-                    <Sparkles size={18} className="text-blue-400 mr-2 group-hover:scale-110 transition-transform duration-300" />
-                    Quote Summarization
-                  </h3>
-                  <p className={`mt-3 text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                    AI instantly extracts key details from any PDF, image, or webpage quote, saving hours of manual data entry.
-                  </p>
-                </AnimatedElement>
-                
-                <AnimatedElement animation="slideRight" delay={200} className={`p-5 rounded-xl ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'} shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group`}>
-                  <h3 className="text-lg font-medium flex items-center">
-                    <Sparkles size={18} className="text-blue-400 mr-2 group-hover:scale-110 transition-transform duration-300" />
-                    Bid Comparison
-                  </h3>
-                  <p className={`mt-3 text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                    Highlight differences between multiple bids to spot inconsistencies, scope gaps, and potential risks.
-                  </p>
-                </AnimatedElement>
-                
-                <AnimatedElement animation="slideRight" delay={300} className={`p-5 rounded-xl ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'} shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group`}>
-                  <h3 className="text-lg font-medium flex items-center">
-                    <Sparkles size={18} className="text-blue-400 mr-2 group-hover:scale-110 transition-transform duration-300" />
-                    Document Generation
-                  </h3>
-                  <p className={`mt-3 text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                    Turn quick notes into formal proposals, reports, and contracts with proper formatting and terminology.
-                  </p>
-                </AnimatedElement>
-                
-                <AnimatedElement animation="slideRight" delay={400} className={`p-5 rounded-xl ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'} shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group`}>
-                  <h3 className="text-lg font-medium flex items-center">
-                    <Sparkles size={18} className="text-blue-400 mr-2 group-hover:scale-110 transition-transform duration-300" />
-                    Smart Suggestions
-                  </h3>
-                  <p className={`mt-3 text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                    Get intelligent insights on pricing, timeline, and material recommendations based on historical data.
-                  </p>
-                </AnimatedElement>
-              </div>
-            </div>
-            
-            <AnimatedElement animation="slideLeft" delay={200} className="md:w-1/2">
-              <div className={`rounded-xl shadow-2xl overflow-hidden ${isDarkMode ? 'bg-gray-900' : 'bg-white'} p-6 relative group`}>
-                {/* Sparkles animation */}
-                <div className="absolute -top-6 -right-6 w-12 h-12 rounded-full bg-blue-400/30 blur-lg animate-pulse"></div>
-                <div className="absolute -bottom-6 -left-6 w-14 h-14 rounded-full bg-pink-600/30 blur-lg animate-pulse"></div>
-                
-                <div className="mb-6">
-                  <div className={`h-4 w-28 ${isDarkMode ? 'bg-gray-800' : 'bg-gray-200'} rounded mb-2`}></div>
-                  <div className={`h-4 w-40 ${isDarkMode ? 'bg-gray-800' : 'bg-gray-200'} rounded`}></div>
-                </div>
-                
-                <div className={`p-5 mb-6 rounded border-l-3 border-blue-400 ${isDarkMode ? 'bg-gray-800' : 'bg-gray-50'} relative overflow-hidden group`}>
-                  <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-pink-600 to-blue-400"></div>
-                  <div className="flex items-center mb-3">
-                    <Sparkles size={18} className="text-blue-400 mr-2 animate-pulse" />
-                    <span className="text-sm font-medium">AI Insights</span>
-                  </div>
-                  <div className={`space-y-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                    <p className="text-sm">Bid #1 includes premium materials ($8k more than standard grade)</p>
-                    <p className="text-sm">Bid #2 has shorter timeline but 20% higher labor costs</p>
-                    <p className="text-sm">Both bids missing permit fees (~$1,200 based on local regulations)</p>
-                    <p className="text-sm">Recommendation: Request itemized breakdown of material costs</p>
-                  </div>
-                </div>
-                
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className={`p-4 rounded ${isDarkMode ? 'bg-gray-800' : 'bg-gray-50'} transform transition-all duration-300 hover:scale-[1.02] cursor-pointer`}>
-                    <div className="flex items-center mb-3">
-                      <div className={`h-10 w-10 rounded-full ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'} mr-3`}></div>
-                      <div>
-                        <div className={`h-3 w-20 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'} rounded mb-1`}></div>
-                        <div className={`h-2 w-16 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'} rounded`}></div>
-                      </div>
-                    </div>
-                    <div className={`h-10 w-full rounded ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'}`}></div>
-                  </div>
-                  <div className={`p-4 rounded ${isDarkMode ? 'bg-gray-800' : 'bg-gray-50'} transform transition-all duration-300 hover:scale-[1.02] cursor-pointer`}>
-                    <div className="flex items-center mb-3">
-                      <div className={`h-10 w-10 rounded-full ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'} mr-3`}></div>
-                      <div>
-                        <div className={`h-3 w-20 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'} rounded mb-1`}></div>
-                        <div className={`h-2 w-16 ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'} rounded`}></div>
-                      </div>
-                    </div>
-                    <div className={`h-10 w-full rounded ${isDarkMode ? 'bg-gray-700' : 'bg-gray-200'}`}></div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center justify-between text-sm">
-                  <div className="flex items-center text-blue-500 transform transition-all duration-300 hover:scale-105 cursor-pointer">
-                    <Sparkles size={16} className="mr-1" />
-                    <span className="font-medium">Generate Detailed Report</span>
-                  </div>
-                  <div className="flex items-center">
-                    <ArrowRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform duration-300" />
-                  </div>
-                </div>
-                
-                {/* Animated typing cursor */}
-                <div className="absolute bottom-6 right-6">
-                  <div className="h-4 w-0.5 bg-blue-500 animate-pulse"></div>
-                </div>
-              </div>
-            </AnimatedElement>
-          </AnimatedElement>
-        </div>
-      </div>
       
-      {/* FAQs Section */}
-      <div className={`py-20 ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'} w-full`}>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <AnimatedElement animation="fade">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold">Frequently Asked Questions</h2>
-              <p className={`mt-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Everything you need to know about Esteammate</p>
-            </div>
-            
-            <div className="space-y-4">
-              {faqs.map((faq, index) => (
-                <AnimatedElement key={index} animation="fade" delay={100 * index}>
-                  <div 
-                    className={`rounded-xl ${isDarkMode ? 'bg-gray-800' : 'bg-white'} shadow-md overflow-hidden transition-all duration-300 ${activeFAQ === index ? 'shadow-xl' : ''}`}
-                  >
-                    <div 
-                      className="p-5 flex justify-between items-center cursor-pointer"
-                      onClick={() => setActiveFAQ(activeFAQ === index ? null : index)}
-                    >
-                      <h3 className="text-lg font-medium">{faq.question}</h3>
-                      <div className={`transform transition-transform duration-300 ${activeFAQ === index ? 'rotate-180' : ''}`}>
-                        <ChevronDown size={20} />
-                      </div>
-                    </div>
-                    
-                    <div 
-                      className={`overflow-hidden transition-all duration-300 ${activeFAQ === index ? 'max-h-60' : 'max-h-0'}`}
-                    >
-                      <div className={`p-5 pt-0 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} border-t ${isDarkMode ? 'border-gray-700' : 'border-gray-100'}`}>
-                        {faq.answer}
-                      </div>
-                    </div>
-                  </div>
-                </AnimatedElement>
-              ))}
-            </div>
-          </AnimatedElement>
-        </div>
-      </div>
       
       {/* Who It's For Section */}
       <div id="who" className={`py-24 ${isDarkMode ? 'bg-gray-800/70' : 'bg-white/70'} backdrop-blur-md w-full`}>
@@ -864,7 +619,7 @@ const EsteamateLanding = () => {
             </p>
           </AnimatedElement>
           
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 title: "Estimators",
@@ -879,11 +634,6 @@ const EsteamateLanding = () => {
               {
                 title: "Renovation Firms",
                 desc: "Track project quotes and contractor performance across multiple simultaneous projects.",
-                icon: "https://via.placeholder.com/64"
-              },
-              {
-                title: "Bidding Companies",
-                desc: "Create professional bids and track client responses with automated follow-ups.",
                 icon: "https://via.placeholder.com/64"
               }
             ].map((persona, index) => (
@@ -1061,10 +811,6 @@ const EsteamateLanding = () => {
                 <a href="#" className="inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-md text-white bg-gradient-to-r from-pink-600 to-blue-400 hover:from-pink-700 hover:to-blue-500 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:translate-y-[-2px] group">
                   Get Early Access
                   <ArrowUpRight size={18} className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-                </a>
-                <a href="#" className="inline-flex items-center justify-center px-8 py-4 text-base font-medium rounded-md border-2 border-gray-300 bg-white text-gray-700 hover:bg-gray-50 shadow-md hover:shadow-lg transition-all duration-300 transform hover:translate-y-[-2px]">
-                  <Play size={18} className="mr-2 text-pink-600" />
-                  Watch Demo
                 </a>
               </div>
             </div>
