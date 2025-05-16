@@ -150,10 +150,6 @@ const EsteamateLanding = () => {
                     Features
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-600 to-blue-400 group-hover:w-full transition-all duration-300"></span>
                   </a>
-                  <a href="#ai" className={`text-sm font-medium relative group whitespace-nowrap ${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-all duration-300`}>
-                    AI Superpowers
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-600 to-blue-400 group-hover:w-full transition-all duration-300"></span>
-                  </a>
                   <a href="#who" className={`text-sm font-medium relative group whitespace-nowrap ${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-all duration-300`}>
                     Who It's For
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-600 to-blue-400 group-hover:w-full transition-all duration-300"></span>
