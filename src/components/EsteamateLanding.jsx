@@ -218,7 +218,7 @@ const EsteamateLanding = () => {
                   Comparing Qoutes Sucks
                 </span>
                 <span className="mt-2 block relative">
-                  So, We did it for 
+                  So, We do it for 
                   <span className="relative inline-block ml-2">
                     you
                     <span className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-blue-400/20 animate-pulse rounded"></span>
@@ -453,7 +453,7 @@ const EsteamateLanding = () => {
           <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 mb-16">
             <div className="md:w-1/3 pr-0 md:pr-8">
               <AnimatedElement animation="slideRight" delay={100} className="space-y-2">
-                {['Scope Creation', 'Qoute Capture', 'Bid Analysis', 'Clarificaiton Scripts'].map((tab, index) => (
+                {['Scope Creation', 'Qoute Capture', 'Bid Analysis', 'Tailored Clarification Scripts'].map((tab, index) => (
                   <div 
                     key={index}
                     className={`p-4 rounded-lg cursor-pointer ${activeTab === index 
@@ -473,27 +473,213 @@ const EsteamateLanding = () => {
             <div className="md:w-2/3">
               <AnimatedElement animation="slideLeft" delay={200} className={`rounded-xl shadow-xl overflow-hidden ${isDarkMode ? 'bg-gray-800' : 'bg-white'} p-6`}>
                 {/* Tab content */}
+                {activeTab === 0 && (
+                  <div className="animate-fadeIn">
+                    <h3 className="text-xl font-semibold mb-4 flex items-center">
+                      <span className="bg-blue-500/10 text-blue-500 p-1 rounded mr-2">
+                        <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 15L15 12L10 9V15Z" fill="currentColor" />
+                          <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </span>
+                      Generative Scope Creation
+                    </h3>
+                    <p className={`mb-6 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                      Smartly generated scope areas based on your project notes, qoutes, and description eliminate clutter and confusion.
+                    </p>
+                    <div className={`aspect-video ${isDarkMode ? 'bg-gradient-to-br from-gray-900 to-gray-800' : 'bg-gradient-to-br from-blue-50 to-gray-100'} rounded-xl shadow-lg flex flex-col relative overflow-hidden p-5`}>
+                      <div className={`absolute inset-0 ${isDarkMode ? 'bg-gray-800/70' : 'bg-white/70'} rounded-xl`}></div>
+                      <div className="relative z-10 flex flex-col h-full">
+                        <div className="flex items-center mb-4">
+                          <div className="text-blue-500 mr-3 bg-blue-500/10 p-2 rounded-lg">
+                            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M3 17L9 11L13 15L21 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                          </div>
+                          <div>
+                            <h4 className={`${isDarkMode ? 'text-gray-100' : 'text-gray-800'} text-lg font-semibold`}>AI Suggested Scope Areas</h4>
+                            <p className={`${isDarkMode ? 'text-gray-400' : 'text-gray-500'} text-sm`}>Click on a suggestion to add it to your confirmed scope areas.</p>
+                          </div>
+                        </div>
+                        
+                        <div className="grid grid-cols-2 gap-4">
+                          {[
+                            "Demolition and disposal",
+                            "Structural modifications",
+                            "Electrical system installation",
+                            "Plumbing system installation",
+                            "Data and communications",
+                            "Interior wall framing"
+                          ].map((item, index) => (
+                            <div 
+                              key={index} 
+                              className={`
+                                group
+                                ${isDarkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-white hover:bg-blue-50'} 
+                                rounded-lg p-3 flex items-center cursor-pointer 
+                                transition-all duration-300 ease-in-out
+                                ${isDarkMode ? 'shadow-md' : 'shadow-md'}
+                                hover:shadow-lg transform hover:-translate-y-1
+                              `}
+                            >
+                              <div className={`
+                                w-8 h-8 rounded-full 
+                                ${isDarkMode ? 'bg-green-500/20' : 'bg-green-100'} 
+                                flex items-center justify-center 
+                                text-green-500 mr-3
+                                group-hover:bg-green-500 group-hover:text-white
+                                transition-colors duration-300
+                              `}>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M12 5V19M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                              </div>
+                              <span className={`${isDarkMode ? 'text-gray-200' : 'text-gray-700'} text-sm font-medium`}>{item}</span>
+                            </div>
+                          ))}
+                        </div>
+                        
+                        {/* Action buttons */}
+                        <div className="mt-auto pt-4 flex justify-end">
+                          <button className={`
+                            ${isDarkMode ? 'bg-blue-600 hover:bg-blue-500' : 'bg-blue-500 hover:bg-blue-600'} 
+                            text-white px-4 py-2 rounded-lg text-sm font-medium
+                            transition-colors duration-200
+                            flex items-center
+                          `}>
+                            <svg className="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M9 12H15M12 9V15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                            Add Custom Scope
+                          </button>
+                        </div>
+                      </div>
+                      
+                      {/* Decorative elements */}
+                      <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-blue-500/10 rounded-full blur-xl"></div>
+                      <div className="absolute -top-6 -left-6 w-24 h-24 bg-green-500/10 rounded-full blur-xl"></div>
+                    </div>
+                    
+                    <div className="mt-6 flex items-center space-x-4">
+                      <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'} flex items-center`}>
+                        <div className="w-6 h-6 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 mr-2">
+                          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 13L9 17L19 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </div>
+                        AI-generated suggestions
+                      </div>
+                      <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'} flex items-center`}>
+                        <div className="w-6 h-6 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500 mr-2">
+                          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 5V19M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </div>
+                        One-click scope area creation
+                      </div>
+                    </div>
+                  </div>
+                )}
+                
                 {activeTab === 1 && (
                   <div className="animate-fadeIn">
-                    <h3 className="text-xl font-semibold mb-4">Instant Quote Capture</h3>
+                    <h3 className="text-xl font-semibold mb-4 flex items-center">
+                      <span className="bg-blue-500/10 text-blue-500 p-1 rounded mr-2">
+                        <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9 12L11 14L15 10M20.6179 5.98434C20.4132 5.99472 20.2072 5.99997 20 5.99997C16.9265 5.99997 14.123 4.84453 11.9999 2.94434C9.87691 4.84446 7.07339 5.99985 4 5.99985C3.79277 5.99985 3.58678 5.9946 3.38213 5.98422C3.1327 6.94783 3 7.95842 3 9.00001C3 14.5915 6.82432 19.2898 12 20.622C17.1757 19.2898 21 14.5915 21 9.00001C21 7.95847 20.8673 6.94791 20.6179 5.98434Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </span>
+                      Instant Quote Capture
+                    </h3>
                     <p className={`mb-6 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                       Capture quotes from any source - PDF files, emails, websites, or even photos of paper documents. Our AI automatically extracts key details.
                     </p>
-                    <div className="aspect-video bg-gradient-to-br from-gray-900 to-gray-700 rounded-lg flex items-center justify-center relative overflow-hidden">
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="text-white flex flex-col items-center">
-                          <Upload size={40} className="mb-2" />
-                          <span className="text-sm">Drag & Drop files or click to browse</span>
+                    <div className={`aspect-video ${isDarkMode ? 'bg-gray-800' : 'bg-gray-50'} rounded-xl shadow-lg flex flex-col relative overflow-auto`}>
+                      <div className={`absolute inset-0 ${isDarkMode ? 'bg-gray-800' : 'bg-white'} rounded-xl`}></div>
+                      
+                      <div className="relative z-10 flex flex-col h-full p-6 overflow-auto">
+                        {/* Modal-like header */}
+                        <div className="flex justify-between items-center mb-3">
+                          <h4 className={`${isDarkMode ? 'text-gray-100' : 'text-gray-800'} text-xl font-medium`}>Add New Quote</h4>
+                          <button className="text-gray-400 hover:text-gray-500">
+                            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M6 18L18 6M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                          </button>
+                        </div>
+                        
+                        {/* Instructions */}
+                        <p className={`${isDarkMode ? 'text-gray-400' : 'text-gray-500'} text-sm mb-3`}>
+                          Paste the full text of the quote below, or upload a text-based file (.txt, .md, .pdf). 
+                          The AI will attempt to extract details.
+                        </p>
+                        
+                        {/* Text input section */}
+                        <div className="mb-3">
+                          <label className={`block ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} text-sm font-medium mb-1`}>
+                            Paste Quote Text
+                          </label>
+                          <div className={`${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'} border rounded-lg p-1 relative overflow-hidden`}>
+                            <div className="min-h-16 p-1">
+                              <span className="text-gray-400 text-sm">Paste the full content of the quote here...</span>
+                            </div>
+                            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-pink-500"></div>
+                          </div>
+                        </div>
+                        
+                        {/* OR divider */}
+                        <div className="flex items-center my-2">
+                          <div className={`flex-grow border-t ${isDarkMode ? 'border-gray-700' : 'border-gray-200'}`}></div>
+                          <span className={`mx-4 text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>OR</span>
+                          <div className={`flex-grow border-t ${isDarkMode ? 'border-gray-700' : 'border-gray-200'}`}></div>
+                        </div>
+                        
+                        {/* File upload section */}
+                        <div>
+                          <label className={`block ${isDarkMode ? 'text-gray-300' : 'text-gray-600'} text-sm font-medium mb-1`}>
+                            Upload Quote File
+                          </label>
+                          <div className={`flex items-center ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'} border rounded-lg p-2`}>
+                            <button className={`${isDarkMode ? 'bg-gray-600 hover:bg-gray-500' : 'bg-gray-100 hover:bg-gray-200'} px-3 py-1 rounded text-xs mr-2`}>
+                              Choose File
+                            </button>
+                            <span className={`${isDarkMode ? 'text-gray-400' : 'text-gray-500'} text-xs`}>No file chosen</span>
+                          </div>
+                          <p className={`mt-1 text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                            Supports .txt, .md, .pdf files. For other formats, please copy and paste the text.
+                          </p>
+                        </div>
+                        
+                        {/* Action buttons - placed at the bottom */}
+                        <div className="mt-auto pt-3 flex justify-end space-x-2">
+                          <button className={`${isDarkMode ? 'bg-gray-700 hover:bg-gray-600 text-gray-300' : 'bg-gray-100 hover:bg-gray-200 text-gray-700'} px-3 py-1 rounded-lg text-xs font-medium`}>
+                            Cancel
+                          </button>
+                          <button className={`bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded-lg text-xs font-medium flex items-center`}>
+                            <svg className="w-3 h-3 mr-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M5 13L9 17L19 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                            Process Quote
+                          </button>
                         </div>
                       </div>
-                      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-pink-600 to-blue-400"></div>
                     </div>
                     <div className="mt-6 flex items-center space-x-4">
-                      <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-                        <Check size={16} className="inline-block text-green-500 mr-1" /> Supports PDF, DOCX, XLSX, JPG
+                      <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'} flex items-center`}>
+                        <div className="w-6 h-6 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 mr-2">
+                          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 13L9 17L19 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </div>
+                        Supports PDF, DOCX, TXT, JPG
                       </div>
-                      <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-                        <Check size={16} className="inline-block text-green-500 mr-1" /> Extracts line items
+                      <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'} flex items-center`}>
+                        <div className="w-6 h-6 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500 mr-2">
+                          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15M9 5C9 6.10457 9.89543 7 11 7H13C14.1046 7 15 6.10457 15 5M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </div>
+                        Extracts line items
                       </div>
                     </div>
                   </div>
@@ -501,100 +687,323 @@ const EsteamateLanding = () => {
                 
                 {activeTab === 2 && (
                   <div className="animate-fadeIn">
-                    <h3 className="text-xl font-semibold mb-4">Smart Bid Comparison</h3>
+                    <h3 className="text-xl font-semibold mb-4 flex items-center">
+                      <span className="bg-blue-500/10 text-blue-500 p-1 rounded mr-2">
+                        <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 10V20M8 10L4 9.99998V20L8 20M8 10L12 12L16 10M16 10L20 9.99998V20L16 20M16 10V20M16 20L12 18L8 20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </span>
+                      Smart Bid Comparison
+                    </h3>
                     <p className={`mb-6 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                       AI-powered analysis automatically compares bids, highlights differences, and helps you identify the best option based on multiple factors.
                     </p>
-                    <div className="aspect-video bg-gradient-to-br from-gray-900 to-gray-700 rounded-lg flex items-center justify-center relative overflow-hidden">
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="grid grid-cols-2 gap-4 p-4 w-full">
-                          <div className="bg-white/10 rounded p-3">
-                            <div className="h-2 w-24 bg-white/20 rounded mb-2"></div>
-                            <div className="h-8 w-full bg-white/20 rounded mb-2"></div>
-                            <div className="h-2 w-16 bg-white/20 rounded"></div>
-                          </div>
-                          <div className="bg-white/10 rounded p-3">
-                            <div className="h-2 w-24 bg-white/20 rounded mb-2"></div>
-                            <div className="h-8 w-full bg-green-500/40 rounded mb-2"></div>
-                            <div className="h-2 w-16 bg-white/20 rounded"></div>
-                          </div>
+                    <div className={`aspect-video ${isDarkMode ? 'bg-gray-800' : 'bg-gray-50'} rounded-xl shadow-lg flex flex-col relative overflow-hidden`}>
+                      <div className="relative z-10 flex flex-col h-full">
+                        {/* Bid comparison table */}
+                        <div className={`w-full h-full ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>
+                          <table className="w-full h-full border-collapse">
+                            {/* Table header with company names and action buttons */}
+                            <thead>
+                              <tr>
+                                <th className="w-1/3"></th>
+                                <th className={`w-1/3 py-2 text-center font-semibold text-lg border-b ${isDarkMode ? 'border-gray-700' : 'border-gray-200'}`}>Titan Concrete</th>
+                                <th className={`w-1/3 py-2 text-center font-semibold text-lg border-b ${isDarkMode ? 'border-gray-700' : 'border-gray-200'}`}>Adrahams</th>
+                              </tr>
+                              <tr>
+                                <th></th>
+                                <th className="py-3 text-center">
+                                  <button className={`${isDarkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'} px-4 py-2 rounded font-medium text-sm inline-block w-3/4`}>
+                                    Generate Script
+                                  </button>
+                                  <button className={`${isDarkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'} px-4 py-2 my-2 rounded font-medium text-sm inline-block w-3/4`}>
+                                    View Quote
+                                  </button>
+                                </th>
+                                <th className="py-3 text-center">
+                                  <button className={`${isDarkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'} px-4 py-2 rounded font-medium text-sm inline-block w-3/4`}>
+                                    Generate Script
+                                  </button>
+                                  <button className={`${isDarkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'} px-4 py-2 my-2 rounded font-medium text-sm inline-block w-3/4`}>
+                                    View Quote
+                                  </button>
+                                </th>
+                              </tr>
+                              {/* <tr>
+                                <th></th>
+                                <th className="py-2 text-center">
+                                  <button className={`${isDarkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'} px-4 py-2 rounded font-medium text-sm inline-block w-3/4`}>
+                                    View Quote
+                                  </button>
+                                </th>
+                                <th className="py-2 text-center">
+                                  <button className={`${isDarkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'} px-4 py-2 rounded font-medium text-sm inline-block w-3/4`}>
+                                    View Quote
+                                  </button>
+                                </th>
+                              </tr> */}
+                            </thead>
+                            
+                            {/* Table body - comparing different line items */}
+                            <tbody>
+                              <tr className={`border-t ${isDarkMode ? 'border-gray-700' : 'border-gray-200'}`}>
+                                <td className={`p-4 text-right font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>Concrete Cutting</td>
+                                <td className="p-4 text-center">
+                                  <div className="flex justify-center">
+                                    <div className="bg-green-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 13L9 17L19 7" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                      </svg>
+                                    </div>
+                                    <span className="ml-2">Included</span>
+                                  </div>
+                                </td>
+                                <td className="p-4 text-center">
+                                  <div className="flex justify-center">
+                                    <div className="bg-red-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 18L18 6M6 6L18 18" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                      </svg>
+                                    </div>
+                                    <span className="ml-2">Not Included</span>
+                                  </div>
+                                </td>
+                              </tr>
+                              
+                              <tr className={`border-t ${isDarkMode ? 'border-gray-700' : 'border-gray-200'}`}>
+                                <td className={`p-4 text-right font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>Coordination with Demolition Crew</td>
+                                <td className="p-4 text-center">
+                                  <div className="flex justify-center">
+                                    <div className="bg-green-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 13L9 17L19 7" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                      </svg>
+                                    </div>
+                                    <span className="ml-2">Included</span>
+                                  </div>
+                                </td>
+                                <td className="p-4 text-center">
+                                  <div className="flex justify-center">
+                                    <div className="bg-yellow-400 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 8V12M12 16H12.01" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                      </svg>
+                                    </div>
+                                    <span className="ml-2">Unclear</span>
+                                  </div>
+                                </td>
+                              </tr>
+                              
+                              <tr className={`border-t ${isDarkMode ? 'border-gray-700' : 'border-gray-200'}`}>
+                                <td className={`p-4 text-right font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>X-Ray Scanning</td>
+                                <td className="p-4 text-center">
+                                  <div className="flex justify-center">
+                                    <div className="bg-green-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 13L9 17L19 7" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                      </svg>
+                                    </div>
+                                    <span className="ml-2">Included</span>
+                                  </div>
+                                </td>
+                                <td className="p-4 text-center">
+                                  <div className="flex justify-center">
+                                    <div className="bg-green-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 13L9 17L19 7" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                      </svg>
+                                    </div>
+                                    <span className="ml-2">Included</span>
+                                  </div>
+                                </td>
+                              </tr>
+                              
+                              <tr className={`border-t ${isDarkMode ? 'border-gray-700' : 'border-gray-200'}`}>
+                                <td className={`p-4 text-right font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>Protective Super Six Poly Wrap</td>
+                                <td className="p-4 text-center">
+                                  <div className="flex justify-center">
+                                    <div className="bg-green-500 text-white w-8 h-8 rounded-full flex items-center justify-center">
+                                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 13L9 17L19 7" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                      </svg>
+                                    </div>
+                                    <span className="ml-2">Included</span>
+                                  </div>
+                                </td>
+                                <td className="p-4 text-center">
+                                  <div className="flex items-center justify-center">
+                                    <div className="bg-green-500 text-white w-8 h-8 rounded-full flex items-center justify-center mr-2">
+                                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 13L9 17L19 7" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                      </svg>
+                                    </div>
+                                    <span>Includes 3 doorways</span>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        
+                        {/* Add bidder button */}
+                        <div className="absolute top-16 left-8">
+                          <button className={`${isDarkMode ? 'bg-gray-700 hover:bg-gray-600' : 'bg-gray-200 hover:bg-gray-300'} px-4 py-2 rounded font-medium text-sm flex items-center`}>
+                            <svg className="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M12 5V19M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                            Invite More Bidders
+                          </button>
                         </div>
                       </div>
-                      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-pink-600 to-blue-400"></div>
                     </div>
                     <div className="mt-6 flex items-center space-x-4">
-                      <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-                        <Check size={16} className="inline-block text-green-500 mr-1" /> Side-by-side comparisons
+                      <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'} flex items-center`}>
+                        <div className="w-6 h-6 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 mr-2">
+                          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12H15M12 9V15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </div>
+                        Side-by-side comparisons
                       </div>
-                      <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-                        <Check size={16} className="inline-block text-green-500 mr-1" /> Highlights discrepancies
+                      <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'} flex items-center`}>
+                        <div className="w-6 h-6 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500 mr-2">
+                          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12H15M12 9V15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </div>
+                        Highlights discrepancies
                       </div>
                     </div>
                   </div>
                 )}
-                
-                {activeTab === 0 && (
-                  <div className="animate-fadeIn">
-                    <h3 className="text-xl font-semibold mb-4">Generative Scope Creation</h3>
-                    <p className={`mb-6 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                      Smarly generated scope areas based on your project notes, qoutes, and description eliminate clutter and confusion.
-                    </p>
-                    <div className="aspect-video bg-gradient-to-br from-gray-900 to-gray-700 rounded-lg flex items-center justify-center relative overflow-hidden">
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="flex space-x-3">
-                          <div className="w-10 h-10 rounded-full bg-pink-500/70 flex items-center justify-center text-white text-sm">S1</div>
-                          <div className="w-10 h-10 rounded-full bg-blue-500/70 flex items-center justify-center text-white text-sm">S2</div>
-                          <div className="w-10 h-10 rounded-full bg-green-500/70 flex items-center justify-center text-white text-sm">S3</div>
-                          <div className="w-10 h-10 rounded-full bg-purple-500/70 flex items-center justify-center text-white text-sm">S4</div>
-                          <div className="w-10 h-10 rounded-full bg-gray-700 border border-gray-500 flex items-center justify-center text-white text-sm">+</div>
-                        </div>
-                      </div>
-                      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-pink-600 to-blue-400"></div>
-                    </div>
-                    <div className="mt-6 flex items-center space-x-4">
-                      <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-                        <Check size={16} className="inline-block text-green-500 mr-1" /> Real-time updates
-                      </div>
-                      <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-                        <Check size={16} className="inline-block text-green-500 mr-1" /> Role-based permissions
-                      </div>
-                    </div>
-                  </div>
-                )}
-                
+
                 {activeTab === 3 && (
                   <div className="animate-fadeIn">
-                    <h3 className="text-xl font-semibold mb-4">Tailored Clarification Scripts</h3>
+                    <h3 className="text-xl font-semibold mb-4 flex items-center">
+                      <span className="bg-blue-500/10 text-blue-500 p-1 rounded mr-2">
+                        <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 9L11 12L8 15M13 9H16M13 15H16M5 5H19C20.1046 5 21 5.89543 21 7V17C21 18.1046 20.1046 19 19 19H5C3.89543 19 3 18.1046 3 17V7C3 5.89543 3.89543 5 5 5Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </span>
+                     Tailored Clarification Scripts
+                    </h3>
                     <p className={`mb-6 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                       Professional bid-leveling scripts based on any gaps or omissions discovered, ready for you to share with bidders.
                     </p>
-                    <div className="aspect-video bg-gradient-to-br from-gray-900 to-gray-700 rounded-lg flex items-center justify-center relative overflow-hidden">
-                      <div className="absolute inset-0 grid grid-cols-2 gap-3 p-4">
-                        <div className="bg-white/10 rounded p-2">
-                          <div className="h-2 w-16 bg-white/20 rounded mb-2"></div>
-                          <div className="h-16 w-full bg-gradient-to-r from-blue-500/40 to-blue-600/40 rounded"></div>
-                        </div>
-                        <div className="bg-white/10 rounded p-2">
-                          <div className="h-2 w-20 bg-white/20 rounded mb-2"></div>
-                          <div className="h-16 w-full bg-gradient-to-r from-pink-500/40 to-pink-600/40 rounded"></div>
-                        </div>
-                        <div className="bg-white/10 rounded p-2">
-                          <div className="h-2 w-24 bg-white/20 rounded mb-2"></div>
-                          <div className="h-16 w-full bg-gradient-to-r from-green-500/40 to-green-600/40 rounded"></div>
-                        </div>
-                        <div className="bg-white/10 rounded p-2">
-                          <div className="h-2 w-12 bg-white/20 rounded mb-2"></div>
-                          <div className="h-16 w-full bg-gradient-to-r from-purple-500/40 to-purple-600/40 rounded"></div>
+                    <div className={`aspect-video ${isDarkMode ? 'bg-gray-800' : 'bg-gray-50'} rounded-xl shadow-lg flex flex-col relative overflow-hidden`}>
+                      <div className="relative z-10 flex flex-col h-full">
+                        {/* Script generator modal */}
+                        <div className={`w-full h-full ${isDarkMode ? 'text-gray-200' : 'text-gray-800'} p-0`}>
+                          <div className={`w-full h-full ${isDarkMode ? 'bg-gray-800' : 'bg-white'} rounded-lg shadow-md relative`}>
+                            {/* Modal header */}
+                            <div className="flex justify-between items-center px-6 py-2 pt-0 border-b border-gray-200 dark:border-gray-700">
+                              <h4 className="text-lg font-medium">Generate Email Script for Titan Concrete</h4>
+                              <button className="text-gray-400 hover:text-gray-500">
+                                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6 18L18 6M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                              </button>
+                            </div>
+                            
+                            {/* Modal body */}
+                            <div className="px-6 py-3">
+                              <p className={`mb-3 text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                                Select tone and layout, then generate the script.
+                              </p>
+                              
+                              {/* Tone selection */}
+                              <div className="mb-3">
+                                <label className={`block mb-1 text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                                  Tone
+                                </label>
+                                <div className={`relative ${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-white border-gray-300'} border rounded-md`}>
+                                  <select className={`appearance-none w-full py-1.5 pl-3 pr-8 rounded-md text-sm ${isDarkMode ? 'bg-gray-700 text-gray-200' : 'bg-white text-gray-700'} focus:outline-none`}>
+                                    <option>Cordial</option>
+                                    <option>Formal</option>
+                                    <option>Professional</option>
+                                    <option>Friendly</option>
+                                  </select>
+                                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400">
+                                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M19 9L12 16L5 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                              {/* Layout options */}
+                              <div className="mb-3">
+                                <label className={`block mb-1 text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                                  Layout for Missing Items
+                                </label>
+                                <div className="flex space-x-4">
+                                  <label className="flex items-center">
+                                    <input type="radio" name="layout" className="hidden" defaultChecked />
+                                    <div className={`w-4 h-4 rounded-full mr-2 flex items-center justify-center ${isDarkMode ? 'border-blue-500' : 'border-blue-500'} border`}>
+                                      <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                                    </div>
+                                    <span className="text-sm">Bullet Points</span>
+                                  </label>
+                                  <label className="flex items-center">
+                                    <input type="radio" name="layout" className="hidden" />
+                                    <div className={`w-4 h-4 rounded-full mr-2 flex items-center justify-center ${isDarkMode ? 'border-gray-400' : 'border-gray-400'} border`}>
+                                      <div className="w-0 h-0 rounded-full"></div>
+                                    </div>
+                                    <span className="text-sm">Paragraph</span>
+                                  </label>
+                                </div>
+                              </div>
+                              
+                              {/* Generate button */}
+                              <button className="w-full bg-blue-50 hover:bg-blue-100 text-blue-600 px-4 py-2 rounded-md flex items-center justify-center mb-3 text-sm">
+                                <svg className="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M8 9L11 12L8 15M13 9H16M13 15H16M5 5H19C20.1046 5 21 5.89543 21 7V17C21 18.1046 20.1046 19 19 19H5C3.89543 19 3 18.1046 3 17V7C3 5.89543 3.89543 5 5 5Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                                Generate Script
+                              </button>
+                              
+                              {/* Generated script preview */}
+                              <div>
+                                <label className={`block mb-1 text-sm font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                                  Generated Script:
+                                </label>
+                                <div className={`${isDarkMode ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-200'} border rounded-md p-3 h-28 overflow-auto text-sm`}>
+                                  <p className="mb-1.5">Dear Titan Concrete team,</p>
+                                  <p className="mb-1.5">I hope this email finds you well.</p>
+                                  <p className="mb-1.5">We are currently reviewing quotes for the Downtown Office Renovation project and wanted to follow up regarding your submitted proposal. It appears that some scope items may be missing, and we would appreciate clarification on whether these were intentionally excluded or if they can be included in your quote.</p>
+                                </div>
+                                
+                                {/* Copy script button */}
+                                <div className="flex justify-center mt-2">
+                                  <button className="flex items-center px-3 py-1.5 border border-gray-300 dark:border-gray-600 rounded-md text-sm">
+                                    <svg className="w-4 h-4 mr-1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M8 5H6C4.89543 5 4 5.89543 4 7V19C4 20.1046 4.89543 21 6 21H16C17.1046 21 18 20.1046 18 19V17M8 5C8 6.10457 8.89543 7 10 7H12C13.1046 7 14 6.10457 14 5M8 5C8 3.89543 8.89543 3 10 3H12C13.1046 3 14 3.89543 14 5M14 5H16C17.1046 5 18 5.89543 18 7V12M20 16V20M20 16H16M20 16L16 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    </svg>
+                                    Copy Script
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-pink-600 to-blue-400"></div>
                     </div>
                     <div className="mt-6 flex items-center space-x-4">
-                      <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-                        <Check size={16} className="inline-block text-green-500 mr-1" /> Project status tracking
+                      <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'} flex items-center`}>
+                        <div className="w-6 h-6 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 mr-2">
+                          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 18V15M12 15H7M12 15V11.5M12 15H17M7 11.5H17M7 11.5V8H17V11.5M7 8H5V20H19V8H17M7 8V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </div>
+                        Multiple tone options
                       </div>
-                      <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-                        <Check size={16} className="inline-block text-green-500 mr-1" /> Budget visualization
+                      <div className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-500'} flex items-center`}>
+                        <div className="w-6 h-6 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500 mr-2">
+                          <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15M9 5C9 6.10457 9.89543 7 11 7H13C14.1046 7 15 6.10457 15 5M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </div>
+                        One-click copy to clipboard
                       </div>
                     </div>
                   </div>
