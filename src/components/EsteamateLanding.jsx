@@ -207,18 +207,14 @@ const EsteamateLanding = () => {
       {/* Hero Section with Parallax Effect */}
       <div className="relative overflow-hidden w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-          <div className="pt-20 pb-20 md:pt-28 md:pb-28 flex flex-col-reverse md:flex-row items-center">
+          <div className="pt-20 pb-20 md:pt-28 md:pb-28 flex flex-col md:flex-row items-center">
             <AnimatedElement animation="slideRight" className="md:w-1/2 lg:pr-8 mt-10 md:mt-0">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-blue-400">
-                  Comparing Qoutes Sucks
+                  Comparing Quotes Sucks
                 </span>
                 <span className="mt-2 block relative">
-                  So, We do it for 
-                  <span className="relative inline-block ml-2">
-                    you
-                    <span className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-blue-400/20 animate-pulse rounded"></span>
-                  </span>
+                  So We do it for you
                   <span className="absolute -bottom-2 left-0 h-1 w-24 bg-gradient-to-r from-pink-600 to-blue-400 rounded"></span>
                 </span>
               </h1>
@@ -238,7 +234,7 @@ const EsteamateLanding = () => {
 
             </AnimatedElement>
 
-            <AnimatedElement animation="slideLeft" className="md:w-1/2 flex justify-end" delay={300}>
+            <AnimatedElement animation="slideLeft" className="md:w-1/2 mt-10 flex justify-end" delay={300}>
               {/* Enhanced Hero Image/Mockup with animation */}
               <div 
                 className={`relative rounded-xl shadow-2xl overflow-hidden ${isDarkMode ? 'bg-gray-800' : 'bg-white'} p-4 max-w-lg transform transition-all duration-500 hover:scale-[1.02]`}
@@ -390,7 +386,7 @@ const EsteamateLanding = () => {
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <X size={16} className="text-red-500 mt-1 mr-3 flex-shrink-0" />
-                    <span className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Qoutes come in all shapes and sizes, making comparing apples to apples a tedious challege</span>
+                    <span className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>Quotes come in all shapes and sizes, making comparing apples to apples a tedious challege</span>
                   </li>
                   <li className="flex items-start">
                     <X size={16} className="text-red-500 mt-1 mr-3 flex-shrink-0" />
@@ -481,7 +477,7 @@ const EsteamateLanding = () => {
                       Generative Scope Creation
                     </h3>
                     <p className={`mb-6 ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                      Smartly generated scope areas based on your project notes, qoutes, and description eliminate clutter and confusion.
+                      Smartly generated scope areas based on your project notes, quotes, and description eliminate clutter and confusion.
                     </p>
                     <div className={`aspect-video ${isDarkMode ? 'bg-gradient-to-br from-gray-900 to-gray-800' : 'bg-gradient-to-br from-blue-50 to-gray-100'} rounded-xl shadow-lg flex flex-col relative overflow-hidden p-5`}>
                       <div className={`absolute inset-0 ${isDarkMode ? 'bg-gray-800/70' : 'bg-white/70'} rounded-xl`}></div>
@@ -1055,11 +1051,11 @@ const EsteamateLanding = () => {
                 <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                   {persona.desc}
                 </p>
-                <div className="mt-6">
+                {/* <div className="mt-6">
                   <a href="#" className={`inline-flex items-center text-sm font-medium ${isDarkMode ? 'text-blue-400 hover:text-blue-300' : 'text-blue-600 hover:text-blue-800'}`}>
                     Learn more <ArrowRight size={14} className="ml-1 group-hover:translate-x-1 transition-transform duration-300" />
                   </a>
-                </div>
+                </div> */}
               </AnimatedElement>
             ))}
           </div>
@@ -1238,101 +1234,9 @@ const EsteamateLanding = () => {
               <div className="mt-6">
                 <span className={`text-xs ${isDarkMode ? 'text-gray-500' : 'text-gray-400'}`}>Powered by OpenAI</span>
               </div>
-              <div className="mt-8 flex space-x-5">
-                <a href="#" className={`text-sm ${isDarkMode ? 'text-gray-400 hover:text-gray-300' : 'text-gray-500 hover:text-gray-900'} hover:scale-110 transition-transform duration-300`}>
-                  <span className="sr-only">LinkedIn</span>
-                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path fillRule="evenodd" d="M19 0h-14c-2.8 0-5 2.2-5 5v14c0 2.8 2.2 5 5 5h14c2.8 0 5-2.2 5-5v-14c0-2.8-2.2-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.3c-1 0-1.8-.8-1.8-1.7s.8-1.7 1.8-1.7 1.8.8 1.8 1.7-.8 1.7-1.8 1.7zm12.5 12.3h-3v-5.6c0-3.4-4-3.1-4 0v5.6h-3v-11h3v1.9c1.4-2.6 7-2.8 7 2.5v6.6z" clipRule="evenodd" />
-                  </svg>
-                </a>
-                <a href="#" className={`text-sm ${isDarkMode ? 'text-gray-400 hover:text-gray-300' : 'text-gray-500 hover:text-gray-900'} hover:scale-110 transition-transform duration-300`}>
-                  <span className="sr-only">Twitter</span>
-                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                  </svg>
-                </a>
-                <a href="#" className={`text-sm ${isDarkMode ? 'text-gray-400 hover:text-gray-300' : 'text-gray-500 hover:text-gray-900'} hover:scale-110 transition-transform duration-300`}>
-                  <span className="sr-only">GitHub</span>
-                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
-                  </svg>
-                </a>
-              </div>
             </div>
             
-            <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
-              <div>
-                <h3 className={`text-sm font-semibold ${isDarkMode ? 'text-gray-300' : 'text-gray-900'} mb-4`}>Product</h3>
-                <ul className="space-y-3">
-                  <li>
-                    <a href="#features" className={`text-sm ${isDarkMode ? 'text-gray-400 hover:text-gray-300' : 'text-gray-500 hover:text-gray-900'} hover:underline transition-all duration-300`}>Features</a>
-                  </li>
-                  <li>
-                    <a href="#ai" className={`text-sm ${isDarkMode ? 'text-gray-400 hover:text-gray-300' : 'text-gray-500 hover:text-gray-900'} hover:underline transition-all duration-300`}>AI Capabilities</a>
-                  </li>
-                  <li>
-                    <a href="#pricing" className={`text-sm ${isDarkMode ? 'text-gray-400 hover:text-gray-300' : 'text-gray-500 hover:text-gray-900'} hover:underline transition-all duration-300`}>Pricing</a>
-                  </li>
-                  <li>
-                    <a href="#" className={`text-sm ${isDarkMode ? 'text-gray-400 hover:text-gray-300' : 'text-gray-500 hover:text-gray-900'} hover:underline transition-all duration-300`}>FAQ</a>
-                  </li>
-                </ul>
-              </div>
-              
-              <div>
-                <h3 className={`text-sm font-semibold ${isDarkMode ? 'text-gray-300' : 'text-gray-900'} mb-4`}>Company</h3>
-                <ul className="space-y-3">
-                  <li>
-                    <a href="#" className={`text-sm ${isDarkMode ? 'text-gray-400 hover:text-gray-300' : 'text-gray-500 hover:text-gray-900'} hover:underline transition-all duration-300`}>About</a>
-                  </li>
-                  <li>
-                    <a href="#" className={`text-sm ${isDarkMode ? 'text-gray-400 hover:text-gray-300' : 'text-gray-500 hover:text-gray-900'} hover:underline transition-all duration-300`}>Blog</a>
-                  </li>
-                  <li>
-                    <a href="#" className={`text-sm ${isDarkMode ? 'text-gray-400 hover:text-gray-300' : 'text-gray-500 hover:text-gray-900'} hover:underline transition-all duration-300`}>Careers</a>
-                  </li>
-                  <li>
-                    <a href="#" className={`text-sm ${isDarkMode ? 'text-gray-400 hover:text-gray-300' : 'text-gray-500 hover:text-gray-900'} hover:underline transition-all duration-300`}>Press</a>
-                  </li>
-                </ul>
-              </div>
-              
-              <div>
-                <h3 className={`text-sm font-semibold ${isDarkMode ? 'text-gray-300' : 'text-gray-900'} mb-4`}>Resources</h3>
-                <ul className="space-y-3">
-                  <li>
-                    <a href="#" className={`text-sm ${isDarkMode ? 'text-gray-400 hover:text-gray-300' : 'text-gray-500 hover:text-gray-900'} hover:underline transition-all duration-300`}>Documentation</a>
-                  </li>
-                  <li>
-                    <a href="#" className={`text-sm ${isDarkMode ? 'text-gray-400 hover:text-gray-300' : 'text-gray-500 hover:text-gray-900'} hover:underline transition-all duration-300`}>Guides</a>
-                  </li>
-                  <li>
-                    <a href="#" className={`text-sm ${isDarkMode ? 'text-gray-400 hover:text-gray-300' : 'text-gray-500 hover:text-gray-900'} hover:underline transition-all duration-300`}>API</a>
-                  </li>
-                  <li>
-                    <a href="#" className={`text-sm ${isDarkMode ? 'text-gray-400 hover:text-gray-300' : 'text-gray-500 hover:text-gray-900'} hover:underline transition-all duration-300`}>Support</a>
-                  </li>
-                </ul>
-              </div>
-              
-              <div>
-                <h3 className={`text-sm font-semibold ${isDarkMode ? 'text-gray-300' : 'text-gray-900'} mb-4`}>Legal</h3>
-                <ul className="space-y-3">
-                  <li>
-                    <a href="#" className={`text-sm ${isDarkMode ? 'text-gray-400 hover:text-gray-300' : 'text-gray-500 hover:text-gray-900'} hover:underline transition-all duration-300`}>Privacy</a>
-                  </li>
-                  <li>
-                    <a href="#" className={`text-sm ${isDarkMode ? 'text-gray-400 hover:text-gray-300' : 'text-gray-500 hover:text-gray-900'} hover:underline transition-all duration-300`}>Terms</a>
-                  </li>
-                  <li>
-                    <a href="#" className={`text-sm ${isDarkMode ? 'text-gray-400 hover:text-gray-300' : 'text-gray-500 hover:text-gray-900'} hover:underline transition-all duration-300`}>Cookie Policy</a>
-                  </li>
-                  <li>
-                  <a href="#" className={`text-sm ${isDarkMode ? 'text-gray-400 hover:text-gray-300' : 'text-gray-500 hover:text-gray-900'} hover:underline transition-all duration-300`}>Contact</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            
           </div>
           
           <div className={`mt-12 pt-8 border-t ${isDarkMode ? 'border-gray-800' : 'border-gray-200'} flex flex-col md:flex-row justify-between items-center`}>
@@ -1347,9 +1251,6 @@ const EsteamateLanding = () => {
                 {isDarkMode ? <Sun size={16} /> : <Moon size={16} />}
                 <span className="sr-only">{isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}</span>
               </button>
-              <a href="#" className={`text-sm ${isDarkMode ? 'text-gray-400 hover:text-gray-300' : 'text-gray-500 hover:text-gray-900'} hover:underline transition-all duration-300`}>
-                Change region
-              </a>
             </div>
           </div>
         </div>
