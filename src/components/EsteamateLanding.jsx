@@ -226,10 +226,10 @@ const EsteamateLanding = () => {
                   Get Early Access
                   <ArrowUpRight size={18} className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                 </a>
-                {/* <a href="#" className="flex items-center justify-center px-8 py-4 text-base font-medium rounded-md border-2 border-gray-300 bg-white/80 backdrop-blur-sm text-gray-700 hover:bg-gray-50 shadow-md hover:shadow-lg transition-all duration-300 transform hover:translate-y-[-2px]">
+                <a href="https://form.jotform.com/251553374762057" className="flex items-center justify-center px-8 py-4 text-base font-medium rounded-md border-2 border-gray-300 bg-white/80 backdrop-blur-sm text-gray-700 hover:bg-gray-50 shadow-md hover:shadow-lg transition-all duration-300 transform hover:translate-y-[-2px]">
                   <Play size={18} className="mr-2 text-pink-600" />
-                  Watch Demo
-                </a> */}
+                  Try it Now! (Beta)
+                </a>
               </div>
 
             </AnimatedElement>
